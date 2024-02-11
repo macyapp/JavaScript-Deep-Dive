@@ -1,22 +1,12 @@
-let getSiblings = (e) => {
-  // for collecting siblings
-  let siblings = [];
-  // if no parent, return no sibling
-  if (!e.parentNode) {
-    return siblings;
-  }
-  // first child of the parent node
-  let sibling = e.parentNode.firstElementChild;
-  // collecting siblings
-  while (sibling) {
-    if (sibling.nodeType === 1 && sibling !== e) {
-      siblings.push(sibling);
-    }
-    sibling = sibling.nextElementSibling;
-  }
-  return siblings;
-};
+let div = document.querySelector(".container");
 
-let siblings = getSiblings(document.querySelector(".current"));
-siblingText = siblings.map((e) => e.textContent);
-console.log(siblingText);
+// compose DOM nodes
+let fragment = document.createDocumentFragment();
+for (let i = 0; i < 1000; i++) {
+  let p = document.createElement("p");
+  p.textContent = `Paragraph ${i + 1}`;
+  fragment.appendChild(p);
+}
+
+// append the fragment to the DOM tree
+div.appendChild(fragment);
