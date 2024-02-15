@@ -11,14 +11,14 @@ typedef vector<vector<long long>> vvll;
 typedef vector<string> vs;
 
 void solve() {
-    string x;
-    cin>>x;
-    for(int i=0; i<x.size(); i++) {
-        if(i!=0 || x[i]!='9')
-            x[i]=min(x[i]-'0',9-(x[i]-'0'))+'0';
-        dbg(x[i]);
+    int y=1;
+    while(true) {
+        if((1&y)>0 && (1^y)>0) {
+            break;
+        }
+        y++;
     }
-    cout<<x<<endl;
+    cout<<y<<endl;
 }
 
 int main() {
