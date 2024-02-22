@@ -11,22 +11,16 @@ typedef vector<vector<long long>> vvll;
 typedef vector<string> vs;
 
 void solve() {
-    int y=1;
-    while(true) {
-        if((1&y)>0 && (1^y)>0) {
-            break;
-        }
-        y++;
-    }
-    cout<<y<<endl;
+    int a,b;
+    cin>>a>>b;
+    cout<<a%b<<endl;
 }
 
 int main() {
     fastio;
     int t;
     cin>>t;
-    while(t--) {
+    while(t--)
         solve();
-    }
     return 0;
 }
