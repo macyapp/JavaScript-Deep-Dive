@@ -1,10 +1,2 @@
-let user = {
-  name: "Sid",
-  age: 24,
-};
-
-user["isAdmin"] = true;
-
-console.log(user);
-
-delete user.age
+let bar = document.querySelector("#main");
+console.log(bar.dataset);
